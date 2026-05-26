@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Advent Pro', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 1px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #4d5bc4;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-clipboard-list"></i> Home</a>
+		<a id="schedule" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-screwdriver-wrench"></i> Schedule</a>
+		<a id="deliverables" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-swatchbook"></i> Business Strategy</a>
+		<a id="feedback" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-message"></i> Feedback</a>
+		<a id="notes" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open-reader"></i> Notes</a>
+		<a id="resources" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-atlus"></i> Resources</a>
+		
+
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "vertical";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://www.notion.so/Beaverton-Client-Portal-36cad60489f780619367d6dfe1fe18f7?source=copy_link", '_blank').focus();
+			else if (id == "schedule")
+				window.open("https://www.notion.so/Schedule-36cad60489f780f8bf9fecd7476fc182?source=copy_link", '_blank').focus();
+			else if (id == "deliverables")
+				window.open("https://www.notion.so/Deliverables-36cad60489f780c09bffce6d21f1f712?source=copy_link", '_blank').focus();
+			else if (id == "feedback")
+				window.open("https://www.notion.so/Feedback-36cad60489f780a6be5acf9f852c46b8?source=copy_link", '_blank').focus();
+			else if (id == "notes")
+				window.open("window.open("https://www.notion.so/Notes-36cad60489f78069b4ffcec3eeab8c5d?source=copy_link", '_blank').focus();", '_blank').focus();
+			else if (id == "resources")
+        window.open("https://www.notion.so/Resources-36cad60489f780c1b2aedc618c06241c?source=copy_link", '_blank').focus();
+				ad60489f7806d8979dff525cc2a3f?source=copy_link", '_blank').focus();
+		}
+	</script>
+
+
+</body>
+
+</html>
