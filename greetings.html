@@ -58,15 +58,16 @@
 <body>
 
 	<nav class="navMenu  border">
-		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-light fa-house"></i> Home</a>
-		<a id=“admin” onclick="navigate(this.id)" href="#"> <i class="fa-light fa-screwdriver-wrench”></i> Admin</a>
-		<a id=“strategy” onclick="navigate(this.id)" href="#"> <i class="fa-light” fa-chess-queen”></i> Strategy</a>
-		<a id=“projects” onclick="navigate(this.id)" href="#"> <i class="fa-light fa-folder-open”></i> Projects</a>
-		<a id=“clients” onclick="navigate(this.id)" href="#"> <i class="fa-light fa-user-group”></i> Clients</a>
-		<a id=“products_services” onclick="navigate(this.id)" href="#"> <i class="fa-light fa-bag-shopping”></i> Products & Services</a>
-		<a id=“marketing” onclick="navigate(this.id)" href="#"> <i class="fa-light “fa-hashtag”></i> Marketing</a>
-		<a id=“accounting” onclick="navigate(this.id)" href="#"> <i class="fa-light fa-sack-dollar”></i> Accounting</a>
-		<a id=“resources” onclick="navigate(this.id)" href="#"> <i class="fa-light fa-book-bookmark”></i> Resources</a>
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
+		<a id="admin" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> Admin</a>
+		<a id="strategy" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-week"></i> Strategy</a>
+		<a id="projects" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i> Projects</a>
+		<a id="clients" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-money-bill-wave"></i> Clients</a>
+		<a id="products_services" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-list-check"></i> Products & Services</a>
+		<a id="marketing" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-lightbulb"></i> Marketing</a>
+		<a id="accounting" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-layer-group"></i> Accounting</a>
+		<a id="resources" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> Resources</a>
+
 
 
 
@@ -75,7 +76,7 @@
 
 	<script>
 
-		let direction = “vertical”;
+		let direction = "horizontal";
 		if (direction === "vertical") {
 			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
 		}
@@ -85,24 +86,22 @@
 
 			if (id == 'home')
 				window.open("https://example.com", '_blank').focus();
-			if (id == ‘admin’)
+			else if (id == "admin")
 				window.open("https://example.com", '_blank').focus();
-			if (id == ‘strategy’)
+			else if (id == "strategy")
 				window.open("https://example.com", '_blank').focus();
-			if (id == ‘projects’)
+			else if (id == "projects")
 				window.open("https://example.com", '_blank').focus();
-			if (id == ‘clients’)
+			else if (id == "clients")
 				window.open("https://example.com", '_blank').focus();
-			if (id == ‘products_services’)
+			else if (id == "products_services")
 				window.open("https://example.com", '_blank').focus();
-			if (id == ‘marketing’)
+			else if (id == "marketing")
 				window.open("https://example.com", '_blank').focus();
-			if (id == ‘accounting’)
+			else if (id == "accounting")
 				window.open("https://example.com", '_blank').focus();
-			if (id == ‘resources’)
+			else if (id == "resources")
 				window.open("https://example.com", '_blank').focus();
-
-
 		}
 	</script>
 
