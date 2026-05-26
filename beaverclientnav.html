@@ -71,16 +71,14 @@
 	</nav>
 
 
-	<script>
-
+		<script>
+		// 1. Fixed style injection with !important to override the inline-block layout
 		let direction = "vertical";
 		if (direction === "vertical") {
-			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block !important; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
 		}
 
-
 		function navigate(id) {
-
 			if (id == 'home')
 				window.open("https://www.notion.so/Beaverton-Client-Portal-36cad60489f780619367d6dfe1fe18f7?source=copy_link", '_blank').focus();
 			else if (id == "schedule")
@@ -89,15 +87,13 @@
 				window.open("https://www.notion.so/Deliverables-36cad60489f780c09bffce6d21f1f712?source=copy_link", '_blank').focus();
 			else if (id == "feedback")
 				window.open("https://www.notion.so/Feedback-36cad60489f780a6be5acf9f852c46b8?source=copy_link", '_blank').focus();
+			// 2. FIXED: Removed the double window.open here
 			else if (id == "notes")
-				window.open("window.open("https://www.notion.so/Notes-36cad60489f78069b4ffcec3eeab8c5d?source=copy_link", '_blank').focus();", '_blank').focus();
+				window.open("https://www.notion.so/Notes-36cad60489f78069b4ffcec3eeab8c5d?source=copy_link", '_blank').focus();
 			else if (id == "resources")
-        window.open("https://www.notion.so/Resources-36cad60489f780c1b2aedc618c06241c?source=copy_link", '_blank').focus();
-				
+				window.open("https://www.notion.so/Resources-36cad60489f780c1b2aedc618c06241c?source=copy_link", '_blank').focus();
 		}
 	</script>
-
-
 </body>
-
 </html>
+
