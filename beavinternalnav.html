@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Advent Pro', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 1px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #4d5bc4;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house-chimney"></i> Home</a>
+		<a id="schedule" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-clipboard-list"></i> Schedule</a>
+		<a id="research" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-magnifying-glass"></i> Research</a>
+		<a id="design" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-palette"></i> Design</a>
+		<a id="testing" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-vial-circle-checked"></i> Testing</a>
+    <a id="client" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-user"></i> Client</a>
+    <a id="case_studies" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-pen-to-square"></i> Case Studies</a>
+		<a id="resources" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-atlas"></i> Resources</a>
+		
+
+
+
+	</nav>
+
+
+		<script>
+		// 1. Fixed style injection with !important to override the inline-block layout
+		let direction = "vertical";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block !important; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+		function navigate(id) {
+			if (id == 'home')
+				window.open("https://www.notion.so/Beaverton-App-369ad60489f780c08ac0eb2ef1161ee5?source=copy_link", '_blank').focus();
+			else if (id == "schedule")
+				window.open("https://www.notion.so/Schedule-36cad60489f7800eb3e3f39715d450e3?source=copy_link", '_blank').focus();
+			else if (id == "research")
+				window.open("https://www.notion.so/Research-36cad60489f780d687f3c2d1b8d6f108?source=copy_link", '_blank').focus();
+			else if (id == "design")
+				window.open("https://www.notion.so/Design-36cad60489f780828289c294e2b5cd9f?source=copy_link", '_blank').focus();
+			// 2. FIXED: Removed the double window.open here
+			else if (id == "testing")
+				window.open("https://www.notion.so/Testing-36cad60489f78024accfc9b7f1d10f5a?source=copy_link", '_blank').focus();
+      else if (id == "client")
+				window.open("https://www.notion.so/Client-36cad60489f780ad8a4dc958bfaa6b6f?source=copy_link", '_blank').focus();
+      else if (id == "case_study")
+				window.open("https://https://www.notion.so/Case-Study-36cad60489f7803b9578db72321ffb07?source=copy_link", '_blank').focus();
+			else if (id == "resources")
+				window.open("https://www.notion.so/Resources-36dad60489f7803bab9cdb0c8a7cd74a?source=copy_link", '_blank').focus();
+		}
+	</script>
+</body>
+</html>
